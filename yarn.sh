@@ -8,4 +8,4 @@ if [ $COUNT_DOCKER_IMAGE == "0" ]; then
     docker build $PWD/docker-images/yarn -t yarn
 fi
 
-docker run --rm -t --init -v $PWD:/app -w /app --entrypoint yarn --net tq-docker-template yarn $@
+docker run --rm -t --init -v $PWD:/app -w /app --entrypoint yarn --net tq_quest yarn $@
