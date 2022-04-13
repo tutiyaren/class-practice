@@ -16,14 +16,6 @@
 ./docker-compose-local.sh up
 ```
 
-## その他コマンド
-
-### Docker 環境に変更があった時
-
-```
-./docker-compose-local.sh up --build
-```
-
 ## ページ紹介
 
 php
@@ -33,9 +25,3 @@ php
 PHPMyAdmin
 
 [localhost:3306](http://localhost:3306)
-
-## 設定を変更したい
-
-```
-localhost:8080をhtmlが表示されるようにしたい -> nginx/default.conf 4行目を index index.htmlにする。
-```
