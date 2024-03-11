@@ -1,11 +1,6 @@
 <?php
-$dbUserName = "root";
-$dbPassword = "password";
-$pdo = new PDO("mysql:host=mysql; dbname=tq_quest; charset=utf8", $dbUserName, $dbPassword);
+require_once __DIR__ . '../../vendor/autoload.php';
+use App\Incomes;
 
-$sql = "SELECT * FROM incomes";
-$statement = $pdo->prepare($sql);
-$statement->execute();
-$incomes = $statement->fetchAll(PDO::FETCH_ASSOC);
-
-echo $incomes[0]['amount'];
+$incomes = new Incomes();
+var_dump($incomes->fetchAllIncomes());
